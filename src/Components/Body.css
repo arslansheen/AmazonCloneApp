@@ -1,0 +1,10 @@
+.home__image {
+    /* margin-bottom: 27px; */
+    width: 100%;
+    border: none !important;
+    z-index: -1;
+    margin: 0px;
+    margin-left: 0;
+    mask-image: linear-gradient(to bottom,rgba(0,0,0,1),rgba(0,0,0,0));
+
+}

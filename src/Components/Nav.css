@@ -1,0 +1,34 @@
+.header__nav{
+color: #FFFFFF;
+border:1px solid red !important;
+display: flex;
+width: 35%;
+flex-direction: row;
+justify-content:space-evenly;
+}
+.header__option{
+display: flex;
+flex-flow: column nowrap;
+/* margin-left :10px; */
+/* margin-right :10px; */
+border: 1px solid red;
+margin-bottom:10px;
+margin-top:10px;
+}
+.header__optionLineOne
+{
+font-size: 13px;
+}
+.header__optionLineTwo {
+    font-weight: 800;
+    font-size: 1vw;
+}
+.shopping__baskedIcon {
+    display: flex;
+    align-items: center;
+}
+.header__basketCount {
+/* margin-left: 10%; */
+margin-right: 10%;
+font-size: 15px;
+}

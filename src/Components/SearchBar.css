@@ -1,0 +1,31 @@
+.header__search{
+    
+    margin:10px;
+    margin-left: 0px;
+    margin-right: 0px;
+    display: flex;
+    height: 100%;
+    width:50vw;
+}
+.header__searchIcon {
+    color: #131921 !important;
+    height: 38px !important;
+    background-color: #F3A847;
+    border-radius: 4px !important;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+    width: 5% !important;
+    
+}
+.header__searchInput{
+    border: none;
+    border-radius: 4px !important;
+    border-top-right-radius: 0px;
+    border-top-right-radius: 0px !important;
+    min-width: 60px !important;
+    border-bottom-right-radius: 0px !important;
+    /* margin-bottom: px; */
+    height: 38px;
+    border: #FFFFFF;
+    flex: 1;
+}
