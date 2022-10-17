@@ -12,6 +12,12 @@ const Product = () => {
           <strong>50</strong>
         </div>
         <div className="product__rating"></div>
+        <p className="rating">⭐</p>
+        <img
+          src="https://m.media-amazon.com/images/I/71YbMhc-JLL._AC_UL320_.jpg"
+          alt=""
+        />
+        <button>Add to Basket</button>
       </div>
     </>
   );

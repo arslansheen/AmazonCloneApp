@@ -11,17 +11,25 @@ display: flex;
 flex-flow: column nowrap;
 /* margin-left :10px; */
 /* margin-right :10px; */
-border: 1px solid red;
+/* border: 1px solid red; */
 margin-bottom:10px;
 margin-top:10px;
 }
 .header__optionLineOne
 {
-font-size: 13px;
+font-size: 1.5vw;
 }
 .header__optionLineTwo {
     font-weight: 800;
-    font-size: 1vw;
+    font-size: 1.5vw;
+}
+@media (min-width:1000px) {
+    .header__optionLineTwo {
+        font-size: 13px;
+    }
+    .header__optionLineOne{
+        font-size: 13px;
+    }
 }
 .shopping__baskedIcon {
     display: flex;
@@ -29,6 +37,6 @@ font-size: 13px;
 }
 .header__basketCount {
 /* margin-left: 10%; */
-margin-right: 10%;
+margin-left: 25%;
 font-size: 15px;
 }

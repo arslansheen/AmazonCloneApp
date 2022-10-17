@@ -20,7 +20,9 @@ function Body(props) {
           <Product />
           <Product />
         </div>
-        <div className="body__row"></div>
+        <div className="body__row">
+          <Product />
+        </div>
       </div>
     </div>
   );
