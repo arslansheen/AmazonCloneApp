@@ -32,8 +32,8 @@ font-size: 1.5vw;
     }
 }
 .shopping__baskedIcon {
-    display: flex;
-    align-items: center;
+    display: flex !important;
+    align-items: center !important;
 }
 .header__basketCount {
 /* margin-left: 10%; */
