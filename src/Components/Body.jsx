@@ -12,16 +12,46 @@ function Body(props) {
           alt=""
         />
         <div className="body__row">
-          <Product />
-          <Product />
+          <Product
+            imageSrc="https://m.media-amazon.com/images/I/71YbMhc-JLL._AC_UL320_.jpg"
+            rating={5}
+            description="LEGO City 2022 Advent Calendar 60352 Building Toy Set for Kids, Boys and Girls Ages 5+; Includes a City Playmat and 5 City TV"
+            price={30}
+          />
+          <Product
+            imageSrc="https://m.media-amazon.com/images/I/71YbMhc-JLL._AC_UL320_.jpg"
+            rating={5}
+            description="LEGO City 2022 Advent Calendar 60352 Building Toy Set for Kids, Boys and Girls Ages 5+; Includes a City Playmat and 5 City TV"
+            price={30}
+          />
         </div>
         <div className="body__row">
-          <Product />
-          <Product />
-          <Product />
+          <Product
+            imageSrc="https://m.media-amazon.com/images/I/71YbMhc-JLL._AC_UL320_.jpg"
+            rating={5}
+            description="LEGO City 2022 Advent Calendar 60352 Building Toy Set for Kids, Boys and Girls Ages 5+; Includes a City Playmat and 5 City TV"
+            price={30}
+          />
+          <Product
+            rating={5}
+            imageSrc="https://m.media-amazon.com/images/I/71YbMhc-JLL._AC_UL320_.jpg"
+            description="LEGO City 2022 Advent Calendar 60352 Building Toy Set for Kids, Boys and Girls Ages 5+; Includes a City Playmat and 5 City TV"
+            price={30}
+          />
+          <Product
+            imageSrc="https://m.media-amazon.com/images/I/71YbMhc-JLL._AC_UL320_.jpg"
+            rating={5}
+            description="LEGO City 2022 Advent Calendar 60352 Building Toy Set for Kids, Boys and Girls Ages 5+; Includes a City Playmat and 5 City TV"
+            price={30}
+          />
         </div>
         <div className="body__row">
-          <Product />
+          <Product
+            imageSrc="https://m.media-amazon.com/images/I/71YbMhc-JLL._AC_UL320_.jpg"
+            rating={5}
+            description="Amazon.com Gift Card in a Birthday Gift Box (Various Designs)"
+            price={30}
+          />
         </div>
       </div>
     </div>

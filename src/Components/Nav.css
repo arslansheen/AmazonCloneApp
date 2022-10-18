@@ -1,6 +1,6 @@
 .header__nav{
 color: #FFFFFF;
-border:1px solid red !important;
+/* border:1px solid red !important; */
 display: flex;
 width: 35%;
 flex-direction: row;
@@ -37,6 +37,6 @@ font-size: 1.5vw;
 }
 .header__basketCount {
 /* margin-left: 10%; */
-margin-left: 25%;
+/* margin-left: 20%; */
 font-size: 15px;
 }

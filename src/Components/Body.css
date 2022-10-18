@@ -1,5 +1,15 @@
+
+.body{
+    display: flex;
+    justify-content: center;
+    max-width: 1500px;
+    margin-left: auto;
+    border: 1px solid blue;
+    margin-right: auto;
+    background-color: #EAEDED;
+}
 .home__image {
-    margin-bottom: -50px !important;
+    margin-bottom: -300px !important;
     width: 100%;
     border: none !important;
     z-index: -1;
@@ -9,11 +19,15 @@
 
 }
 .body__row{
+    z-index: 1;
+    /* background-color: white; */
     /* min-height: 100px; */
     display: flex;
+    width: 90%;
+    
     align-items: center;
     justify-content: center;
-    max-width: 1500px;
+    /* max-width: 1500px; */
     margin-right: auto;
     margin-left: auto;
 }

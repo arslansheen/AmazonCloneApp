@@ -3,8 +3,15 @@ color: white;
 display: flex;
 margin: 0px;
 padding-left: 15px;
-box-sizing: border-box;
 margin-top: 10px;
 /* border: 1px solid blue; */
-font-size: 13px;
+font-size: 1.5vw;
+
+}
+@media(min-width:1000px)
+{
+    .deliverTo__header{
+        font-size: 13px;
+    }
+
 }
