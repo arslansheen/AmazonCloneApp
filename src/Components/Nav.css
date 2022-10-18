@@ -36,7 +36,12 @@ font-size: 1.5vw;
     align-items: center !important;
 }
 .header__basketCount {
-/* margin-left: 10%; */
-/* margin-left: 20%; */
+margin-left: 5px;
 font-size: 15px;
+}
+.shopping__baskedIcon >a {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    color: white;
 }
