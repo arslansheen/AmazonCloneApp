@@ -1,7 +1,8 @@
 import './App.css';
+import React from 'react';
 import Header from './Components/Header.jsx'
 import Body from './Components/Body.jsx'
-import CheckOut from './CheckOut';
+import CheckOut from './Components/CheckOut';
 import {
   BrowserRouter as Router,
   Routes,
