@@ -2,7 +2,10 @@ import React from 'react';
 import './Nav.css';
 import ShoppingBasketIconx from '@mui/icons-material/ShoppingBasket';
 import { Link } from 'react-router-dom';
+import { useStateValue } from '../StateProvider';
 export default function Nav() {
+  const [state, dispatch] = useStateValue();
+  const basketItemsCount = state.basket.length;
   return (
     <div className="header__nav">
       <div className="header__option">
@@ -24,7 +27,9 @@ export default function Nav() {
       <div className="shopping__baskedIcon">
         <Link to="/checkout">
           <ShoppingBasketIconx />
-          <span className="header__optionLineTwo header__basketCount">0</span>
+          <span className="header__optionLineTwo header__basketCount">
+            {basketItemsCount}
+          </span>
         </Link>
       </div>
       {/* <ShoppingCart /> */}

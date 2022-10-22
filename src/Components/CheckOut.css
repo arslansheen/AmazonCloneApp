@@ -1,16 +1,25 @@
 .checkout {
+    margin: 20px;
 display: flex;
+width: auto;
+height: 100vh !important;
 background-color: #EAEDED;
 }
 .checkout__left{
+    /* border: 3px solid green; */
+    width: auto;
+}
+.checkout__ad{
+    background-color: white;
+
 }
 .checkout__right{
-
+    width: auto;
 }
 .checkout__ad >img {
     width: 100%;
     margin-bottom: 10px;
-
+    
 }
 .checkout__title{
     padding-left: 10px;

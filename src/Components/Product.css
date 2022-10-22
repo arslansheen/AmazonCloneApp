@@ -46,6 +46,10 @@
     margin-left: auto;
     margin-right: auto;
 }
+.button {
+    border-color: #a88734 #9c7e31 #846a29;
+
+}
 .product__description >p {
 margin-left: 0;
 margin-right: 0;

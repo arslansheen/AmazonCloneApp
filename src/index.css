@@ -1,7 +1,13 @@
 *{
   margin:0px;
   padding: 0px;
+
+    /* font-size: 1.4vw; */
+
   /* border: 1px solid blue; */
+}
+button {
+  cursor: pointer;
 }
 body {
   margin: 0;
