@@ -8,6 +8,7 @@ import {
   Routes,
   Route
 } from "react-router-dom";
+import Login from './Login';
 function App() {
   return (
     // <>
@@ -15,6 +16,7 @@ function App() {
 <Header/>
 < Routes>
 <Route path='/checkout' element={<CheckOut/>}/>
+<Route path='/login' element={<Login/>}/>
 <Route path='/' element={<>
  <Body/>
 </>}>

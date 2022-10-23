@@ -1,6 +1,9 @@
 import React from 'react';
+import { useStateValue } from '../StateProvider';
 import './BasketItem.css';
+
 function BasketItem({ price, description, rating, imgSrc }) {
+  const [state, dipatch] = useStateValue();
   console.log(imgSrc);
   return (
     <div className="basketItem">
@@ -15,10 +18,16 @@ function BasketItem({ price, description, rating, imgSrc }) {
               return <span>⭐</span>;
             })}
         </div>
-        <button> Remove From Basket</button>
+        <button onClick={removeBaketItem}> Remove From Basket</button>
       </div>
     </div>
   );
+  function removeBaketItem() {
+    dipatch({
+      type: 'REMOVE_FROM_BASKET',
+      item: description,
+    });
+  }
   // return (
   //   <div className="basketItem">
   //     <img

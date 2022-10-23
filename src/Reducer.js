@@ -9,9 +9,13 @@ export default function reducer(state,action){
             };
         case 'REMOVE_FROM_BASKET':
             // const items=state.basket.filter((item)=>item !==action.item);
-            return {
-                ...state,basket:state.basket.filter((item)=>item !==action.item)
-            }    
+            let index=state.basket.findIndex((product)=>{
+ return (product.description === action.item);
+            
+            })
+            let newBasket=[...state.basket];
+            newBasket.splice(index,1)
+            return {...state,basket:[...newBasket]};
         default:
             console.log('error occured')
 

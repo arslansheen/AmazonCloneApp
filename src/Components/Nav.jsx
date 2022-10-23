@@ -1,7 +1,7 @@
 import React from 'react';
 import './Nav.css';
 import ShoppingBasketIconx from '@mui/icons-material/ShoppingBasket';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { useStateValue } from '../StateProvider';
 export default function Nav() {
   const [state, dispatch] = useStateValue();
@@ -9,7 +9,9 @@ export default function Nav() {
   return (
     <div className="header__nav">
       <div className="header__option">
-        <span className="header__optionLineOne">Hello, Sigin</span>
+        <Link to="/login" activeClassName="test" exact>
+          <span className="header__optionLineOne">Hello, Sigin</span>
+        </Link>
         <span className="header__optionLineTwo">Accounts and Lists</span>
       </div>
       <div className="header__option">

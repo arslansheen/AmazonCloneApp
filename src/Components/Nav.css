@@ -45,3 +45,7 @@ font-size: 15px;
     justify-content: center;
     color: white;
 }
+.header__option>a{
+    text-decoration: none;
+    color: white;
+}
