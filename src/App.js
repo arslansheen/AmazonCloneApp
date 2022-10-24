@@ -8,16 +8,23 @@ import {
   Routes,
   Route
 } from "react-router-dom";
-import Login from './Login';
+import Login from './Components/Login';
 function App() {
   return (
     // <>
 <Router>
-<Header/>
-< Routes>
-<Route path='/checkout' element={<CheckOut/>}/>
+  <Routes>
 <Route path='/login' element={<Login/>}/>
+  </Routes>
+< Routes>
+<Route path='/checkout' element={
+<>
+<Header/>
+<CheckOut/>
+</>
+}/>
 <Route path='/' element={<>
+<Header/>
  <Body/>
 </>}>
 
