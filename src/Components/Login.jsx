@@ -3,7 +3,10 @@ import './login.css';
 import { useNavigate } from 'react-router-dom';
 import { createUser, signIn } from '../firebase';
 import { useState } from 'react';
+import { useStateValue } from '../StateProvider';
+
 const Login = () => {
+  const [state, dispatch] = useStateValue();
   const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -12,6 +15,12 @@ const Login = () => {
     signIn(email, password)
       .then((userCredentials) => {
         alert(userCredentials);
+        const user = userCredentials.user;
+        dispatch({
+          type: 'LOG_IN_USER',
+          user: user,
+        });
+
         navigate('/');
       })
       .catch((error) => {
@@ -55,7 +64,7 @@ const Login = () => {
               Sign In
             </button>
             <p>
-              By sigining in you agre to Amazon's Conditions of Use & Sale.
+              By signing in you agree to Amazon's Conditions of Use & Sale.
               Please see our Privacy Notice, Our Cookies Notice and our
               Interest-Based Ads Notice.
             </p>

@@ -1,4 +1,5 @@
 import React from 'react';
+import { logOut } from '../firebase';
 import './Nav.css';
 import ShoppingBasketIconx from '@mui/icons-material/ShoppingBasket';
 import { Link, NavLink } from 'react-router-dom';
@@ -6,11 +7,25 @@ import { useStateValue } from '../StateProvider';
 export default function Nav() {
   const [state, dispatch] = useStateValue();
   const basketItemsCount = state.basket.length;
+  function handleSignInOrOut() {
+    if (state.user) {
+      logOut()
+        .then(
+          dispatch({
+            type: 'USER_SIGNED_OUT',
+          })
+        )
+        .catch(() => alert('an error occured cannot sign out '));
+    }
+  }
   return (
     <div className="header__nav">
       <div className="header__option">
-        <Link to="/login" activeClassName="test" exact>
-          <span className="header__optionLineOne">Hello, Sigin</span>
+        <Link to={!state.user && '/login'} activeClassName="test" exact>
+          <span className="header__optionLineOne" onClick={handleSignInOrOut}>
+            Hello,
+            {state?.user ? `${state?.user?.email} Sign Out` : ' Sign In'}
+          </span>
         </Link>
         <span className="header__optionLineTwo">Accounts and Lists</span>
       </div>
