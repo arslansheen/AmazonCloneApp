@@ -3,6 +3,7 @@ import React from 'react';
 import Header from './Components/Header.jsx'
 import Body from './Components/Body.jsx'
 import CheckOut from './Components/CheckOut';
+import Payment from './Components/Payment';
 import {
   BrowserRouter as Router,
   Routes,
@@ -15,9 +16,13 @@ function App() {
 <Router>
   <Routes>
 <Route path='/login' element={<Login/>}/>
-  </Routes>
-< Routes>
-<Route path='/checkout' element={
+<Route path='/payment' element={
+<>
+<Header/>
+<Payment/>
+</>
+}/>
+  <Route path='/checkout' element={
 <>
 <Header/>
 <CheckOut/>
