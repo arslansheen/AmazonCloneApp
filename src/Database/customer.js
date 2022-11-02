@@ -22,11 +22,8 @@ querySnapshot.forEach((productDoc) => {
 return unSub;
     }
 static StorePaymentIntent({userId,paymentIntentID,basket,amount,createdDate}){
-    if(!userId){    
-     userId="DxcXobA7WlNIZUjFZkgnoQzfDkw2";
-
-    } 
-    else if(!paymentIntentID){
+    
+    if(!paymentIntentID){
         throw "connot connect the server";
     }
     try{

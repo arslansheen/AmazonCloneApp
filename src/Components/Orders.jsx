@@ -9,21 +9,24 @@ const Orders = () => {
   const [orders, setOrders] = useState('');
   useEffect(() => {
     // let unSub;
-    const unSubscripeToNewOrders = Customer.getOrders(
-      user?.uid || 'DxcXobA7WlNIZUjFZkgnoQzfDkw2',
-      setOrders
-    );
-    //   (data) => {
-    //     // console.log(data.orders);
-    //     setOrders(data.orders);
-    //     // data.unSubscribe();
-    //   }
-    // );
-    return () => unSubscripeToNewOrders();
+    if (user) {
+      const unSubscripeToNewOrders = Customer.getOrders(user?.uid, setOrders);
+      //   (data) => {
+      //     // console.log(data.orders);
+      //     setOrders(data.orders);
+      //     // data.unSubscribe();
+      //   }
+      // );
+      return async () => unSubscripeToNewOrders();
+    }
   }, []);
   return (
     <div className="orders">
-      <h2>Your Orders</h2>
+      {user ? (
+        <h2>Your Orders</h2>
+      ) : (
+        <h2>You are either not logged in or not ordered any Product</h2>
+      )}
       {/* {orders ? console.log(orders) : console.log('null')} */}
       {orders &&
         orders?.map((order) => (
