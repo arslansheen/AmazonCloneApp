@@ -3,6 +3,7 @@
     background-color: white;
     border-bottom: 1px solid #DDD;;
     padding-bottom: 10px;
+    gap:3%;
     padding-top: 10px;
     height: auto;
     display: flex;
@@ -28,7 +29,7 @@
         width: auto;
         height: 20vw;
         position: relative;
-        top:-30px;
+        top:-50px;
         /* object-fit: contain; */
         /* border: 1px solid red; */
     }
@@ -85,4 +86,8 @@
 .basketItem__rating{
 display: flex;
 font-size: 1.2vw;
+}
+.price{
+    font-weight: 400 !important ;
+    font-size:xx-large;
 }

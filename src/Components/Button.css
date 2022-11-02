@@ -1,0 +1,12 @@
+.buttonComponent {
+    background-color: #F7CA00;
+    border: none;
+    width: 60%;
+    max-width: 300px;
+    border-radius: 4px;
+    min-height: 25px;
+    color: black;
+    /* font-size: 15px; */
+    margin-top: 13px;
+}
+

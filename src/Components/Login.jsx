@@ -14,7 +14,6 @@ const Login = () => {
     e.preventDefault();
     signIn(email, password)
       .then((userCredentials) => {
-        alert(userCredentials);
         const user = userCredentials.user;
         dispatch({
           type: 'LOG_IN_USER',
@@ -29,23 +28,16 @@ const Login = () => {
   }
   function handleEmail(e) {
     setEmail(e.target.value);
-    console.log(email);
   }
   function handlePassword(e) {
     setPassword(e.target.value);
-    console.log(password);
   }
   function register(e) {
     e.preventDefault();
     createUser(email, password)
-      .then((userCredentials) => {
-        alert(userCredentials);
-        console.log(userCredentials);
-      })
+      .then((userCredentials) => {})
       .catch((error) => window.alert(error.message));
   }
-  console.log('foo');
-
   return (
     <>
       <div className="login__container">

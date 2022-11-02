@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useStateValue } from '../StateProvider';
+import Button from './Button';
 import './Product.css';
 const Product = (product) => {
   const [state, dispatch] = useStateValue();
@@ -23,7 +24,7 @@ const Product = (product) => {
         </div>
         <div className="product__price">
           <small>$</small>
-          <strong>{product.price}</strong>
+          <strong className="price">{product.price}</strong>
         </div>
         <div className="product__rating">
           {Array(product.rating)
@@ -33,7 +34,8 @@ const Product = (product) => {
             ))}
         </div>
         <img src={product.imageSrc} alt="" />
-        <button onClick={addToBasket}>Add to Basket</button>
+        {/* <button onClick={addToBasket}>Add to Basket</button> */}
+        <Button onClick={addToBasket} text={'Add to Basket'} />
       </div>
     </>
   );

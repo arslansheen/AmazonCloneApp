@@ -4,12 +4,11 @@
     justify-content: center;
     max-width: 1500px;
     margin-left: auto;
-    border: 1px solid blue;
     margin-right: auto;
     background-color: #EAEDED;
 }
 .home__image {
-    margin-bottom: -300px !important;
+    margin-bottom: -310px !important;
     width: 100%;
     border: none !important;
     z-index: -1;

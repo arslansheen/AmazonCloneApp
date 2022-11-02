@@ -1,5 +1,6 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
+import {getDocs,doc,getFirestore,collection,setDoc,orderBy,query} from "firebase/firestore"
 import { getAnalytics } from "firebase/analytics";
 import {getAuth,createUserWithEmailAndPassword,signInWithEmailAndPassword,signOut} from 'firebase/auth';
 import 'firebase/compat/auth';
@@ -9,6 +10,7 @@ import 'firebase/compat/firestore';
 
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+export {collection, setDoc,doc,orderBy,query,getDocs};
 const firebaseConfig = {
   apiKey: "AIzaSyBqIdheKogJKhW21pWGUcLfMETKpxaK7tc",
   authDomain: "clone-app-925c5.firebaseapp.com",
@@ -20,18 +22,21 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase with firebase config
-const firebaseApp = initializeApp(firebaseConfig);
-const analytics = getAnalytics(firebaseApp);
+export const firebaseApp = initializeApp(firebaseConfig);
+// const analytics = getAnalytics(firebaseApp);
 //create auth object using firebase api
 //create firestore object using firebase app
 const auth=getAuth();
+;
+export const firestore=()=>getFirestore(firebaseApp);
+
 export function createUser(email,password)
 {
-return createUserWithEmailAndPassword(auth,email,password);
+  return createUserWithEmailAndPassword(auth,email,password);
 }
 export function signIn(email,password){
   return signInWithEmailAndPassword(auth,email,password);
 }
 export function logOut(){
-return signOut(auth);
+  return signOut(auth);
 }

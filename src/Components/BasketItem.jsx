@@ -2,15 +2,23 @@ import React from 'react';
 import { useStateValue } from '../StateProvider';
 import './BasketItem.css';
 
-function BasketItem({ price, description, rating, imgSrc }) {
+function BasketItem({
+  price,
+  description,
+  rating,
+  imgSrc,
+  buttonHidden = false,
+}) {
   const [state, dipatch] = useStateValue();
-  console.log(imgSrc);
   return (
     <div className="basketItem">
       <img src={imgSrc} alt="" />
       <div className="basketProduct__Details">
         <p>{description}</p>
-        <p className="basketItem__price">{price}</p>
+        <p className="basketItem__price">
+          <span className="dollar">$</span>
+          <span className="price">{price}</span>
+        </p>
         <div className="basketItem__rating">
           {Array(rating)
             .fill()
@@ -18,7 +26,9 @@ function BasketItem({ price, description, rating, imgSrc }) {
               return <span>⭐</span>;
             })}
         </div>
-        <button onClick={removeBaketItem}> Remove From Basket</button>
+        {buttonHidden || (
+          <button onClick={removeBaketItem}> Remove From Basket</button>
+        )}
       </div>
     </div>
   );

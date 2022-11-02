@@ -3,8 +3,10 @@ export const initialState={
     user:null
 }
 export default function reducer(state,action){
-    console.log('hi im outside dispatch catch:');
+    ;
     switch(action.type){
+        case 'EMPTY_BASKET':
+            return {...state,basket:[]};
         case 'USER_SIGNED_OUT':{
             return {...state,user:null}
         }
@@ -27,7 +29,7 @@ export default function reducer(state,action){
             newBasket.splice(index,1)
             return {...state,basket:[...newBasket]};
         default:
-            console.log('error occured')
+            
 
         
     }

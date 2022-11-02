@@ -7,6 +7,11 @@
     height: 100%;
     width:50vw;
 }
+@media (max-width:480px){
+    .header__searchInput{
+        flex:0.9 !important;
+    }
+}
 .header__searchIcon {
     color: #131921 !important;
     height: 38px !important;

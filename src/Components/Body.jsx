@@ -1,5 +1,6 @@
 import React from 'react';
 import Product from './Product.jsx';
+import backgroudImage from '../images/background-image.jpg';
 import './Body.css';
 function Body(props) {
   return (
@@ -8,7 +9,8 @@ function Body(props) {
         <img
           className="home__image"
           style={{ border: '1px solid blue' }}
-          src="https://m.media-amazon.com/images/I/81YSWfTFDbL._SX3000_.jpg"
+          // src="https://m.media-amazon.com/images/I/81YSWfTFDbL._SX3000_.jpg"
+          src={backgroudImage}
           alt=""
         />
         <div className="body__row">

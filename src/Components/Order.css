@@ -1,0 +1,54 @@
+.order__amount{
+display: flex;
+width: auto;
+justify-content: flex-end;
+gap:2%;
+padding-right: 30px;
+row-gap: 100px;
+}
+.order__id{
+    display: flex;
+    width: auto;
+    /* justify-content: space-between; */
+    gap: 2%;
+}
+.order__amount:first-child{
+    flex: 0.2;
+}
+.order__amount>p{
+    font-weight: 700;
+    font-size: x-large;
+}
+.dollar {
+    position: relative;
+    top: -10px;
+    font-weight: 300;
+}
+.order__amount:last-child{
+    flex:0.8;
+}
+.order__created{
+display: flex;
+margin-bottom: 15px;
+width: auto;
+/* justify-content: space-between; */
+gap: 2%;
+}
+.order__created:first-child{
+    flex: 1;
+}
+.order__created:last-child{
+    flex:0.8
+}
+.basket{
+/* display: flex; */
+}
+.order{
+    padding: 10px;
+    margin: 20px;
+    background-color: white;
+    border: 6px solid light gray;
+}
+.order__id>p,.order__created>p{
+    font-weight: 600;
+}

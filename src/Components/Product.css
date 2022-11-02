@@ -2,6 +2,10 @@
     display: flex;
     justify-content: center;
 }
+.product__price small {
+        position: relative;
+        top:10px;
+}
 .product{
     /* border:1px solid red; */
     z-index: 1;

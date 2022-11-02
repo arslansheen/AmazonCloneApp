@@ -1,7 +1,10 @@
 .checkout {
-    margin: 20px;
+    margin: 20px 0;
+    padding: 10px;
+
 display: flex;
-width: auto;
+width: 100%;
+flex-wrap: wrap;
 height: 100vh !important;
 background-color: #EAEDED;
 }
@@ -11,14 +14,25 @@ background-color: #EAEDED;
 }
 .checkout__ad{
     background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+
+    /* justify-content: center; */
+    /* flex-wrap: wrap; */
+    /* width: 100vw !important; */
 
 }
+@media (max-width:48)
 .checkout__right{
     width: auto;
 }
 .checkout__ad >img {
-    width: 100%;
+    /* width: 75%; */
+    width: 77%;
+    height: auto;
     margin-bottom: 10px;
+    object-fit: cover;
     
 }
 .checkout__title{
