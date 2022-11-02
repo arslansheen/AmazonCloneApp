@@ -14,7 +14,7 @@ export default function CheckOut(props) {
             src="https://images-na.ssl-images-amazon.com/images/G/02/UK_CCMP/TM/OCC_Amazon1._CB423492668.jpg"
             alt=""
           />
-          {basket > 0 && (
+          {basket.length > 0 && (
             <div className="checkout__right">
               <SubTotal />
             </div>
